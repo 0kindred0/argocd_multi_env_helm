@@ -6,17 +6,17 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: "https://github.com/lyzhang1999/kubernetes-example.git"
+      repoURL: "https://github.com/0kindred0/argocd_multi_env_helm.git"
       revision: HEAD
       files:
-      - path: "helm-env/env/*/values.yaml"
+      - path: "env/*/values.yaml"
   template:
     metadata:
       name: "{{path.basename}}"
     spec:
       project: default
       source:
-        repoURL: "https://github.com/lyzhang1999/kubernetes-example.git"
+        repoURL: "https://github.com/0kindred0/argocd_multi_env_helm.git"
         targetRevision: HEAD
         path: "helm-env"
         helm:
