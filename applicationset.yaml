@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: "https://github.com/0kindred0/argocd_multi_env_helm.git"
         targetRevision: HEAD
-        path: "helm-env"
+        path: ""
         helm:
           valueFiles:
           - "env/{{path.basename}}/values.yaml"
